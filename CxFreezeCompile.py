@@ -1,3 +1,14 @@
+# ----------------------------------------------------------------
+# Author: WayneFerdon wayneferdon@hotmail.com
+# Date: 2025-07-16 01:54:17
+# LastEditors: WayneFerdon wayneferdon@hotmail.com
+# LastEditTime: 2025-07-23 00:27:54
+# FilePath: \palworld-server-toolkit\CxFreezeCompile.py
+# ----------------------------------------------------------------
+# Licensed to the .NET Foundation under one or more agreements.
+# The .NET Foundation licenses this file to you under the MIT license.
+# ----------------------------------------------------------------
+
 import sys, os
 from cx_Freeze import setup, Executable
 import shutil
@@ -16,7 +27,7 @@ build_options = {
     # "zip_include_packages": ["zip_includes", "palworld_save_tools"],
     "zip_exclude_packages": ["*"],
     "replace_paths": [("palworld_server_toolkit/resources", "resources")],
-    "include_files": ["palworld_server_toolkit/PalEdit/resources", "palworld_server_toolkit/resources"],
+    "include_files": ["pal_edit/palworld_pal_edit/resources", "palworld_server_toolkit/resources"],
     "zip_includes": [],
 }
 
@@ -38,4 +49,4 @@ setup(
     executables=[Executable("palworld_server_toolkit/editor.py", base=base, icon="palworld_server_toolkit/resources/palworld-save-editor.ico")],
 )
 
-shutil.rmtree(f"build/exe.{sys.platform}/lib/palworld_server_toolkit/PalEdit")
+# shutil.rmtree(f"build/exe.{sys.platform}/lib/palworld_server_toolkit/PalEdit")

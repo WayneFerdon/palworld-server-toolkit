@@ -4863,7 +4863,7 @@ def ShowPlayers(data_source=None):
                                playerMeta['InstanceId'] == srcGuildMapping.GuildInstanceMapping[
                                    toUUID(playerUId)] else tcl(31),
                     playerMeta['InstanceId'],
-                    playerMeta['Level'] if 'Level' in playerMeta else -1, playerMeta['NickName']))
+                    playerMeta['Level']['value'] if 'Level' in playerMeta else -1, playerMeta['NickName']))
         except UnicodeEncodeError as e:
             print(
                 f"Corrupted Player Name {tcl(31)} %s {tcl(0)} PlayerUId {tcl(32)} %s {tcl(0)} [InstanceID %s %s {tcl(0)}]" %

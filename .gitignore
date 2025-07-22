@@ -5,3 +5,6 @@ build
 releases
 dist
 __pycache__
+log.txt
+palworld_server_toolkit/PalEdit
+palworld_server_toolkit.egg-info
